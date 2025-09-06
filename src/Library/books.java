@@ -48,14 +48,14 @@ public class books{
         int sNo;
         System.out.println("Enter the serial number to search the book");
         sNo = sc.nextInt();
-
+        int flag = 0;
 
         System.out.println(
                 "S.No\t\tName\t\tAuthor\t\tAvailable Qty\t\tTotal Qty");
 
         for(int i=0;i<count;i++)
         {
-            if(sNo==theBooks[i].sNo)
+            if(sNo == theBooks[i].sNo)
             {
                 System.out.println(
                         theBooks[i].sNo + "\t\t"
@@ -63,12 +63,15 @@ public class books{
                                 + theBooks[i].authorName + "\t\t"
                                 + theBooks[i].bookQtyCopy + "\t\t"
                                 + theBooks[i].bookQty);
+                flag++;
 
-                return;
             }
 
         }
-         System.out.println("No Such Books Exist");
+        if(flag == 0)
+                    System.out.println("No Book for Serial No "
+                    + sNo + " Found.");
+
 
     }
 

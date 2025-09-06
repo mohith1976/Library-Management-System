@@ -79,9 +79,10 @@ public class books{
     public void searchByAuthorName()
     {
         System.out.println("Search by AuthorName of the Book");
-        String authorName;
-        System.out.println("Enter the author name");
-        authorName = sc.nextLine();
+        sc.nextLine();
+
+        System.out.println("Enter Author Name:");
+        String authorName = sc.nextLine();
         int flag = 0;
         System.out.println(
                 "S.No\t\tName\t\tAuthor\t\tAvailable Qty\t\tTotal Qty");
@@ -102,9 +103,8 @@ public class books{
         }
 
         if(flag == 0)
-        {
-            System.out.println("No Such Books Exist");
-        }
+           System.out.println("No Such Books Exist");
+
     }
 
     public void showAllBooks()

@@ -28,14 +28,15 @@ public class books{
     {
         for(int i=0;i<count;i++)
         {
-            if(this.compareBookObjects(b,this.theBooks[i]) == 0) {
+            if(this.compareBookObjects(b,this.theBooks[i]) == 0)
                 return;
-            }
+
 
         }
         if(count<50)
         {
             theBooks[count] = b;
+            count++;
         }else {
             System.out.println("Insufficient Space ");
         }
